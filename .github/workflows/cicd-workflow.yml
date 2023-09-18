@@ -56,4 +56,4 @@ jobs:
                   task-definition: .aws/node-app-task-definition.json
                   service: node-app-service
                   cluster: dev-demo-devops-cluster
-                  wait-for-service-stability: false
+                  wait-for-service-stability: true
