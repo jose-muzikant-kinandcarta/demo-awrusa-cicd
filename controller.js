@@ -13,6 +13,10 @@ var controllers = {
             res.json(dist);
         });
     },
+    hello: function (req, res) {
+        var hello = { hello: req.params.name };
+        res.json(hello);
+    },
 };
 
 module.exports = controllers;
