@@ -23,21 +23,8 @@ curl http://localhost:3000/distance/10001/90001
 3. Get all the Awrusa programs from a Dynamo DB
    curl http://localhost:3000/programs
 
-# returns 'words'
-
-foobar.pluralize('word')
-
-# returns 'geese'
-
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-
-foobar.singularize('phenomena')
-
-```
-
 ## CI CD
+
 CI CD is configured in
 
 https://github.com/jose-muzikant-kinandcarta/demo-awrusa-cicd/blob/main/.github/workflows/cicd-workflow.yml
@@ -45,6 +32,7 @@ https://github.com/jose-muzikant-kinandcarta/demo-awrusa-cicd/blob/main/.github/
 You can change the target branch, the steps and add more pipelines there
 
 https://github.com/jose-muzikant-kinandcarta/demo-awrusa-cicd/actions
+
 ```
 
 ## Docker and AWS ECR
@@ -59,3 +47,4 @@ https://github.com/jose-muzikant-kinandcarta/demo-awrusa-cicd/actions
 2. Build a local docker inage directly using:
     1. docker build --build-arg DYNAMODB_AK_ID=$YOUR_DYNAMO_AWS_A_KEY_ID --build-arg DYNAMODB_SECRET_AK=$YOUR_DYNAMO_AWS_SECRET_A_KEY -t your-image-name .
     2. docker run -p your_port:3000 -d your-image-name
+```
