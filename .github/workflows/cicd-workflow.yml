@@ -4,7 +4,6 @@ on:
     push:
         branches:
             - main
-            - connect-to-dynamo
 
 jobs:
     build-and-deploy:
