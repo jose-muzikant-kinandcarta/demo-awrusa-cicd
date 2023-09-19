@@ -33,8 +33,6 @@ You can change the target branch, the steps and add more pipelines there
 
 https://github.com/jose-muzikant-kinandcarta/demo-awrusa-cicd/actions
 
-```
-
 ## Docker and AWS ECR
 
 1. Installing the AWS cli (https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) you can build and push a Docker image to ECR following these steps:
@@ -47,4 +45,7 @@ https://github.com/jose-muzikant-kinandcarta/demo-awrusa-cicd/actions
 2. Build a local docker inage directly using:
     1. docker build --build-arg DYNAMODB_AK_ID=$YOUR_DYNAMO_AWS_A_KEY_ID --build-arg DYNAMODB_SECRET_AK=$YOUR_DYNAMO_AWS_SECRET_A_KEY -t your-image-name .
     2. docker run -p your_port:3000 -d your-image-name
+
+```
+
 ```
