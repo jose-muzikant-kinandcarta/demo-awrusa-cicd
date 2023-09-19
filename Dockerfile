@@ -10,5 +10,12 @@ RUN npm install
 # RUN npm ci --omit=dev
 # Bundle app source
 COPY . .
+
+#creating secret keys for Dynamo DB 
+ARG DYNAMODB_AK_ID
+ARG DYNAMODB_SECRET_AK
+RUN echo DYNAMODB_ACCESS_KEY_ID=${DYNAMODB_AK_ID} > .env
+RUN echo DYNAMODB_SECRET_ACCESS_KEY=${DYNAMODB_SECRET_AK} > .env
+
 EXPOSE 3000
 CMD [ "node", "server.js" ]
