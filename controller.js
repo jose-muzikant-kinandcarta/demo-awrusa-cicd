@@ -13,7 +13,7 @@ var controllers = {
         res.json(aboutInfo);
     },
     echo: function (req, res) {
-        var name = { hello: req.params.name };
+        var name = { goodbye: req.params.name };
         res.json(name);
     },
     get_distance: function (req, res) {
