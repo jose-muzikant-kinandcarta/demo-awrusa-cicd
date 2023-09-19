@@ -5,7 +5,7 @@ var controller = require("../controller");
 module.exports = function (app) {
     app.route("/about").get(controller.about);
 
-    app.route("/hello/:name").get(controller.hello);
+    app.route("/echo/:name").get(controller.echo);
 
     app.route("/distance/:zipcode1/:zipcode2").get(controller.get_distance);
 
