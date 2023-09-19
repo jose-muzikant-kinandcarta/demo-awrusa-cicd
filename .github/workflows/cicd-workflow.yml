@@ -35,15 +35,15 @@ jobs:
                   ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
                   IMAGE_TAG: latest
                   REPOSITORY: demo-devops-img-repository
-                  DYNAMO-AWS-A-KEY-ID: ${{ secrets.DYNAMODB_ACCESS_KEY_ID }}
-                  DYNAMO-AWS-SECRET-A-KEY: ${{ secrets.DYNAMODB_SECRET_ACCESS_KEY }}
+                  DYNAMO_AWS_A_KEY_ID: ${{ secrets.DYNAMODB_ACCESS_KEY_ID }}
+                  DYNAMO_AWS_SECRET_A_KEY: ${{ secrets.DYNAMODB_SECRET_ACCESS_KEY }}
               run: |
                   # Build a docker container and
                   # push it to ECR so that it can
                   # be deployed to ECS.
-                  docker build  --build-arg DYNAMODB_AK_ID=$DYNAMO-AWS-A-K-ID --build-arg DYNAMODB_SECRET_AK=$DYNAMO-AWS-SECRET-A-KEY -t $ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG .
+                  docker build  --build-arg DYNAMODB_AK_ID=$DYNAMO_AWS_A_KEY_ID --build-arg DYNAMODB_SECRET_AK=$DYNAMO_AWS_SECRET_A_KEY -t $ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG .
                   echo "Dynamo keys in CICD "
-                  echo $DYNAMO-AWS-A-K-ID $DYNAMO-AWS-SECRET-A-KEY
+                  echo $DYNAMO_AWS_A_KEY_ID $DYNAMO_AWS_SECRET_A_KEY
                   docker push $ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG
                   echo "image=$ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
 
