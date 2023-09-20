@@ -42,6 +42,6 @@ https://github.com/jose-muzikant-kinandcarta/demo-awrusa-cicd/actions
     3. docker tag demo-devops-img-repository:latest 659368592666.dkr.ecr.us-east-1.amazonaws.com/demo-devops-img-repository:latest
     4. docker push 659368592666.dkr.ecr.us-east-1.amazonaws.com/demo-devops-img-repository:latest
 
-2. Build a local docker inage directly using:
+2. Build a local docker inage directly using :
     1. docker build --build-arg DYNAMODB_AK_ID=$YOUR_DYNAMO_AWS_A_KEY_ID --build-arg DYNAMODB_SECRET_AK=$YOUR_DYNAMO_AWS_SECRET_A_KEY -t your-image-name .
     2. docker run -p your_port:3000 -d your-image-name
